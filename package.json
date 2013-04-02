@@ -1,0 +1,23 @@
+{
+  "name": "lookbook",
+  "version": "0.0.1",
+  "description": "A simple way to use the lookbook.nu API with NodeJS.",
+  "main": "lib/main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angiep/lookbook.git"
+  },
+  "keywords": [
+    "lookbook",
+    "lookbook.nu"
+  ],
+  "author": "Angela Panfil",
+  "license": "BSD",
+  "readmeFilename": "README.md"
+}
