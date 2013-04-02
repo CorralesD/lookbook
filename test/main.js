@@ -1,6 +1,7 @@
 var lookbook = require('../lib/main'),
     assert = require('assert');
 
+/*
 describe('looks', function() {
 
     it('looks with callback', function(done) {
@@ -85,7 +86,7 @@ describe('user', function() {
 
     it('invalid user with callback', function(done) {
 
-        lookbook.user(5555555555555555555, undefined, function(error) {
+        lookbook.user(555555555555, undefined, function(error) {
             assert(error !== undefined);
             done();
         });
@@ -94,7 +95,7 @@ describe('user', function() {
 
     it('invalid user with promise', function(done) {
 
-        lookbook.user(5555555555555555555).then(undefined, function(error) {
+        lookbook.user(555555555555).then(undefined, function(error) {
             assert(error !== undefined);
             done();
         });
@@ -138,6 +139,39 @@ describe('look', function() {
 
         lookbook.look(555555555555).then(undefined, function(error) {
             assert(error !== undefined);
+            done();
+        });
+
+    });
+
+});
+*/
+
+describe('leader', function() {
+
+    it('today', function() {
+        assert.equal(lookbook.getTimeParam(), '');
+    });
+    it('week', function() {
+        assert.equal(lookbook.getTimeParam('week'), 'this-week');
+    });
+    it('month', function() {
+        assert.equal(lookbook.getTimeParam('month'), 'this-month');
+    });
+    it('year', function() {
+        assert.equal(lookbook.getTimeParam('year'), 'this-year');
+    });
+    it('all', function() {
+        assert.equal(lookbook.getTimeParam('all'), 'all-time');
+    });
+    
+
+    it('find leaders', function(done) {
+
+        lookbook.leader('week').then(function(users) {
+            done();
+        }, function(error) {
+            console.log(error);
             done();
         });
 
