@@ -19,5 +19,9 @@
   ],
   "author": "Angela Panfil",
   "license": "BSD",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "dependencies": {
+      "mocha": "*",
+      "deferred": "*"
+  }
 }
