@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha test/*.js --timeout 5000ms"
+    "test": "mocha test/*.js --timeout 10000ms"
   },
   "repository": {
     "type": "git",
